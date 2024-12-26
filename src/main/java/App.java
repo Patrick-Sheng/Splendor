@@ -64,6 +64,7 @@ public class App extends Application {
     Parent root = loader.load();
 
     scene = new Scene(root);
+    scene.getStylesheets().add(Objects.requireNonNull(App.class.getResource("/css/style.css")).toExternalForm());
 
     stage.setResizable(false);
     stage.setTitle("Splendor");
