@@ -5,29 +5,29 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainMenuController">
    <children>
       <ImageView fitHeight="768.0" fitWidth="768.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/background/mainMenu.jpeg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="254.0" layoutX="267.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="91.0" fitWidth="254.0" layoutX="267.0" layoutY="325.0" onMouseClicked="#onPlay" onMouseEntered="#handleRectangleEntered" onMouseExited="#handleRectangleExited" pickOnBounds="true" preserveRatio="true" styleClass="highlight-image">
          <image>
             <Image url="@../images/buttons/play.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="254.0" layoutX="267.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="91.0" fitWidth="254.0" layoutX="267.0" layoutY="400.0" onMouseClicked="#onSettings" onMouseEntered="#handleRectangleEntered" onMouseExited="#handleRectangleExited" pickOnBounds="true" preserveRatio="true" styleClass="highlight-image">
          <image>
             <Image url="@../images/buttons/settings.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="254.0" layoutX="267.0" layoutY="475.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="91.0" fitWidth="254.0" layoutX="267.0" layoutY="475.0" onMouseClicked="#onInfo" onMouseEntered="#handleRectangleEntered" onMouseExited="#handleRectangleExited" pickOnBounds="true" preserveRatio="true" styleClass="highlight-image">
          <image>
             <Image url="@../images/buttons/info.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="254.0" layoutX="267.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="91.0" fitWidth="254.0" layoutX="267.0" layoutY="550.0" onMouseClicked="#onExit" onMouseEntered="#handleRectangleEntered" onMouseExited="#handleRectangleExited" pickOnBounds="true" preserveRatio="true" styleClass="highlight-image">
          <image>
             <Image url="@../images/buttons/exit.png" />
          </image>
