@@ -3,7 +3,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import java.util.Objects;
 
 /**
  * This is the entry point of the JavaFX application. This class initializes and runs the JavaFX
@@ -32,6 +34,12 @@ public class App extends Application {
     scene.setRoot(loadFxml(fxml));
   }
 
+  private static void setStage(Stage stage, Parent root) {
+    stage.setScene(scene);
+    stage.show();
+    root.requestFocus();
+  }
+
   /**
    * Loads the FXML file and returns the associated node. The method expects that the file is
    * located in "src/main/resources/fxml".
@@ -56,8 +64,10 @@ public class App extends Application {
     Parent root = loader.load();
 
     scene = new Scene(root);
-    stage.setScene(scene);
-    stage.show();
-    root.requestFocus();
+
+    stage.setResizable(false);
+    stage.setTitle("Splendor");
+    stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/icons/icon.png"))));
+    setStage(stage, root);
   }
 }
